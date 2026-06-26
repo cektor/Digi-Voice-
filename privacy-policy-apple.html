@@ -1,0 +1,843 @@
+<title>Privacy Policy — Digi Voice</title>
+<meta name="description" content="Digi Voice Apple App Store Privacy Policy — English and Turkish / İngilizce ve Türkçe Gizlilik Politikası">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:       #0D1220;
+    --surface:  #141926;
+    --card:     #1A2135;
+    --card-hi:  #1F2840;
+    --border:   #2A3554;
+
+    --sky:      #38BDF8;
+    --sky-dim:  rgba(56,189,248,.10);
+    --green:    #34D399;
+    --amber:    #FBBF24;
+    --red:      #F87171;
+
+    --text:     #E8EAF5;
+    --muted:    #8A93AB;
+    --faint:    #3D4D75;
+
+    --radius:   10px;
+    --radius-sm: 6px;
+  }
+
+  html { font-size: 15px; -webkit-font-smoothing: antialiased; scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    line-height: 1.75;
+  }
+
+  /* ── Sticky nav ── */
+  .lang-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(13,18,32,.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    height: 52px;
+  }
+  .lang-nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: .85rem;
+    font-weight: 600;
+    color: var(--text);
+    white-space: nowrap;
+  }
+  .lang-nav-brand .dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--sky);
+    box-shadow: 0 0 8px var(--sky);
+  }
+  .lang-tabs {
+    display: flex;
+    gap: 4px;
+  }
+  .lang-tab {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: .8rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: all .15s ease;
+    color: var(--muted);
+    background: transparent;
+    letter-spacing: .03em;
+  }
+  .lang-tab.active {
+    background: var(--sky-dim);
+    border-color: rgba(56,189,248,.35);
+    color: var(--sky);
+  }
+  .lang-tab:hover:not(.active) {
+    background: var(--card);
+    color: var(--text);
+  }
+  .meta-pill {
+    font-size: .72rem;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  /* ── Page ── */
+  .page { display: none; max-width: 820px; margin: 0 auto; padding: 48px 24px 80px; }
+  .page.visible { display: block; }
+
+  /* ── Cover ── */
+  .cover {
+    text-align: center;
+    padding: 48px 24px 56px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 48px;
+  }
+  .cover-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .cover-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -.04em;
+    line-height: 1.1;
+    text-wrap: balance;
+    margin-bottom: 12px;
+  }
+  .cover-title span { color: var(--sky); }
+  .cover-sub {
+    color: var(--muted);
+    font-size: .9rem;
+    line-height: 1.6;
+  }
+  .cover-meta {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+  }
+  .meta-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: .78rem;
+    color: var(--muted);
+  }
+  .meta-chip strong { color: var(--text); }
+
+  /* ── Section ── */
+  .section { margin-bottom: 48px; }
+  .section-number {
+    font-size: .7rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: var(--sky);
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    letter-spacing: -.02em;
+    color: var(--text);
+    text-wrap: balance;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border);
+  }
+  h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text);
+    margin: 24px 0 10px;
+  }
+  p {
+    font-size: .9rem;
+    color: var(--muted);
+    margin-bottom: 12px;
+    max-width: 68ch;
+  }
+  strong { color: var(--text); font-weight: 500; }
+  a { color: var(--sky); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  /* ── Table ── */
+  .table-wrap { overflow-x: auto; margin: 16px 0 20px; border-radius: var(--radius); border: 1px solid var(--border); }
+  table { width: 100%; border-collapse: collapse; font-size: .82rem; }
+  thead { background: var(--card-hi); }
+  th {
+    text-align: left;
+    padding: 10px 14px;
+    font-size: .72rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+    border-bottom: 1px solid var(--border);
+  }
+  td {
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(42,53,84,.6);
+    color: var(--muted);
+    vertical-align: top;
+  }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: rgba(255,255,255,.015); }
+  td:first-child, th:first-child { color: var(--text); font-weight: 500; }
+  font-variant-numeric: tabular-nums;
+
+  /* ── Notice / callout ── */
+  .callout {
+    display: flex;
+    gap: 12px;
+    background: var(--sky-dim);
+    border: 1px solid rgba(56,189,248,.2);
+    border-radius: var(--radius);
+    padding: 14px 16px;
+    margin: 20px 0;
+    font-size: .86rem;
+    color: var(--muted);
+    line-height: 1.6;
+  }
+  .callout-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+  .callout.amber {
+    background: rgba(251,191,36,.08);
+    border-color: rgba(251,191,36,.25);
+  }
+
+  /* ── Permission row ── */
+  .perm-list { list-style: none; margin: 12px 0; }
+  .perm-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 14px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-sm);
+    margin-bottom: 8px;
+    font-size: .86rem;
+  }
+  .perm-icon {
+    width: 32px; height: 32px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+    background: var(--sky-dim);
+  }
+  .perm-label { font-weight: 600; color: var(--text); font-size: .85rem; }
+  .perm-desc { color: var(--muted); font-size: .82rem; margin-top: 2px; }
+
+  /* ── Contact card ── */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+    margin-top: 16px;
+  }
+  .contact-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 18px 20px;
+  }
+  .contact-name {
+    font-size: .95rem;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+  .contact-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: .82rem;
+    color: var(--sky);
+    margin-bottom: 6px;
+    text-decoration: none;
+  }
+  .contact-link:hover { opacity: .85; }
+
+  /* ── Footer ── */
+  .footer {
+    margin-top: 64px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    font-size: .75rem;
+    color: var(--faint);
+    text-align: center;
+    line-height: 2;
+  }
+
+  code {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    font-size: .82em;
+    background: var(--card-hi);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 5px;
+    color: var(--sky);
+  }
+
+  @media (max-width: 600px) {
+    .lang-nav { padding: 0 14px; }
+    .meta-pill { display: none; }
+    .cover-title { font-size: 1.6rem; }
+    .page { padding: 32px 16px 60px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; }
+  }
+</style>
+
+<!-- Sticky nav -->
+<nav class="lang-nav">
+  <div class="lang-nav-brand">
+    <span class="dot"></span>
+    Digi Voice · Privacy Policy
+  </div>
+  <div class="lang-tabs">
+    <button class="lang-tab active" onclick="switchLang('en', this)">English</button>
+    <button class="lang-tab" onclick="switchLang('tr', this)">Türkçe</button>
+  </div>
+  <div class="meta-pill">June 26, 2026</div>
+</nav>
+
+<!-- ═══════════════════════ ENGLISH ═══════════════════════ -->
+<div id="page-en" class="page visible">
+
+  <div class="cover">
+    <span class="cover-icon">📻</span>
+    <h1 class="cover-title">Privacy Policy<br><span>Digi Voice</span></h1>
+    <p class="cover-sub">Digital Voice Communication · Amateur Radio</p>
+    <div class="cover-meta">
+      <span class="meta-chip"><strong>Bundle ID</strong> com.alg.dmrvoice</span>
+      <span class="meta-chip"><strong>Platforms</strong> iOS · macOS · watchOS</span>
+      <span class="meta-chip"><strong>Effective</strong> June 26, 2026</span>
+    </div>
+  </div>
+
+  <!-- §1 -->
+  <div class="section">
+    <div class="section-number">Section 01</div>
+    <h2>Introduction</h2>
+    <p>ALGSoft Inc. (<strong>"we," "our,"</strong> or <strong>"us"</strong>) built <strong>Digi Voice</strong> as a commercial amateur radio digital voice communication application. This Privacy Policy explains how we handle information in connection with your use of the Digi Voice app on iOS, macOS, and watchOS devices.</p>
+    <p>Digi Voice is intended for <strong>licensed amateur radio operators</strong>. Use of this application requires a valid amateur radio license issued by your country's telecommunications authority.</p>
+    <div class="callout amber">
+      <span class="callout-icon">⚠️</span>
+      <span>By using Digi Voice, you agree to the terms of this Privacy Policy. If you do not agree, please discontinue use of the application.</span>
+    </div>
+  </div>
+
+  <!-- §2 -->
+  <div class="section">
+    <div class="section-number">Section 02</div>
+    <h2>Digi Voice Collects No Data</h2>
+
+    <div class="callout" style="margin-bottom:20px;">
+      <span class="callout-icon">🔒</span>
+      <span><strong>Plain language:</strong> Digi Voice collects nothing. It has no backend, no database, no analytics, and no crash reporting. It is a radio protocol client — a pipe between your device and the radio network server you choose to connect to. No data ever reaches ALGSoft Inc. or any server we operate.</span>
+    </div>
+
+    <h3>Your Callsign, DMR ID and Passwords Belong to Third-Party Platforms</h3>
+    <p>Your callsign and DMR/NXDN ID are credentials you registered on <strong>RadioID.net</strong>, <strong>BrandMeister</strong>, <strong>TGIF</strong>, or another radio network — independently of Digi Voice. Digi Voice does not issue, register, store, or manage these credentials on its own servers.</p>
+    <p>When you enter your callsign and password in the Settings screen, that information is saved <strong>only on your local device</strong> and sent directly from your device to the third-party server you select. We never receive it.</p>
+
+    <h3>Configuration Stored Locally on Your Device</h3>
+    <p>The following fields are stored only on your device. They are not "collected" by us — we never see them:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Field</th><th>Purpose</th><th>Where It Goes</th></tr></thead>
+        <tbody>
+          <tr><td>Amateur Radio Callsign</td><td>Protocol identification</td><td>Your device → radio server you connect to</td></tr>
+          <tr><td>Digital Radio ID (DMR / NXDN)</td><td>Protocol-level identification</td><td>Your device → radio server you connect to</td></tr>
+          <tr><td>ESSID</td><td>Hotspot subscriber ID suffix</td><td>Your device → radio server you connect to</td></tr>
+          <tr><td>Network Passwords</td><td>Authentication on third-party networks</td><td>Your device → that network's server</td></tr>
+          <tr><td>GPS Coordinates</td><td>Position reporting in protocol packets</td><td>Your device → radio server (if enabled)</td></tr>
+          <tr><td>QTH Grid Locator</td><td>Amateur radio grid reference</td><td>Your device → radio server (if configured)</td></tr>
+          <tr><td>Location Name &amp; Description</td><td>Optional protocol metadata</td><td>Your device → radio server (if configured)</td></tr>
+          <tr><td>Personal URL</td><td>Optional protocol packet field</td><td>Your device → radio server (if configured)</td></tr>
+          <tr><td>Protocol &amp; Server Preferences</td><td>Session settings</td><td>Stays on your device</td></tr>
+          <tr><td>Audio Settings</td><td>Mic level, AGC, VOX configuration</td><td>Stays on your device</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Diagnostic Log Files</h3>
+    <p>The app writes session logs to the device's <strong>Caches directory</strong> (not iCloud-synced). Logs contain connection events, handshake status, audio engine status, GPS acquisition status, and error messages. Logs are stored locally and are <strong>never transmitted to us or any third party automatically</strong>.</p>
+
+    <div class="callout">
+      <span class="callout-icon">ℹ️</span>
+      <span><strong>No analytics, no crash SDK, no telemetry.</strong> Digi Voice does not integrate Firebase, Mixpanel, Sentry, Crashlytics, or any analytics framework. ALGSoft Inc. receives zero telemetry from your device.</span>
+    </div>
+  </div>
+
+  <!-- §3 -->
+  <div class="section">
+    <div class="section-number">Section 03</div>
+    <h2>How We Use Your Information</h2>
+    <p>Your information is used exclusively to operate the application's core radio communication features:</p>
+    <ul class="perm-list">
+      <li>
+        <div class="perm-icon">🔐</div>
+        <div><div class="perm-label">Protocol Authentication</div><div class="perm-desc">Callsign, digital ID, ESSID, and password are included in protocol handshake packets sent to the server you select.</div></div>
+      </li>
+      <li>
+        <div class="perm-icon">📍</div>
+        <div><div class="perm-label">Position Reporting</div><div class="perm-desc">Coordinates you enter or retrieve via GPS are included in protocol configuration packets. This is standard in DMR/BrandMeister/TGIF protocols.</div></div>
+      </li>
+      <li>
+        <div class="perm-icon">🔍</div>
+        <div><div class="perm-label">Callsign / ID Lookup</div><div class="perm-desc">When you tap the ID lookup button, your callsign is sent to radioid.net via HTTPS to retrieve your registered DMR or NXDN ID.</div></div>
+      </li>
+      <li>
+        <div class="perm-icon">🎙️</div>
+        <div><div class="perm-label">Voice Transmission</div><div class="perm-desc">Microphone audio is encoded and transmitted in real time to the radio server for the duration of PTT activation.</div></div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- §4 -->
+  <div class="section">
+    <div class="section-number">Section 04</div>
+    <h2>Information Shared with Third Parties</h2>
+    <p>We do not sell, rent, or commercially share your personal information. The following limited sharing occurs as a direct result of the application's radio network functionality.</p>
+
+    <h3>Radio Network Servers</h3>
+    <p>When you connect to a network server, the following data is transmitted <strong>directly from your device to the server operator you choose</strong> — not through our infrastructure:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Network</th><th>Operator</th><th>Privacy Info</th></tr></thead>
+        <tbody>
+          <tr><td>BrandMeister</td><td>BrandMeister Network</td><td><a href="https://brandmeister.network">brandmeister.network</a></td></tr>
+          <tr><td>TGIF</td><td>TGIF Network</td><td><a href="https://tgif.network">tgif.network</a></td></tr>
+          <tr><td>FreeDMR</td><td>FreeDMR Project</td><td><a href="https://freedmr.cymru">freedmr.cymru</a></td></tr>
+          <tr><td>HBLink / US Digital</td><td>US Digital Network</td><td><a href="https://usdigitalnetwork.com">usdigitalnetwork.com</a></td></tr>
+          <tr><td>D-STAR / YSF / AllStar</td><td>Various operators</td><td>Varies by reflector</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>RadioID.net</h3>
+    <p>When you use the Digital ID lookup feature, your callsign is transmitted to <code>https://radioid.net</code> via HTTPS. Please refer to their privacy policy at <a href="https://radioid.net">radioid.net</a>.</p>
+  </div>
+
+  <!-- §5 -->
+  <div class="section">
+    <div class="section-number">Section 05</div>
+    <h2>Device Permissions</h2>
+    <ul class="perm-list">
+      <li>
+        <div class="perm-icon">🎙️</div>
+        <div>
+          <div class="perm-label">Microphone — Required for PTT</div>
+          <div class="perm-desc">Requested on first PTT attempt. Audio is captured only while PTT is active and is transmitted exclusively to the radio server you are connected to. The app does not record audio to a file.</div>
+        </div>
+      </li>
+      <li>
+        <div class="perm-icon">📍</div>
+        <div>
+          <div class="perm-label">Location (When In Use) — Optional</div>
+          <div class="perm-desc">Requested only when you tap "Get GPS Location." Uses <code>requestWhenInUseAuthorization()</code> — background location is never requested. Location service stops immediately after coordinates are retrieved.</div>
+        </div>
+      </li>
+      <li>
+        <div class="perm-icon">🌐</div>
+        <div>
+          <div class="perm-label">Local Network — For local hotspot connections</div>
+          <div class="perm-desc">Required to allow UDP connections to DMR hotspot devices on your local Wi-Fi network. Does not grant access to files or data on other devices.</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- §6 -->
+  <div class="section">
+    <div class="section-number">Section 06</div>
+    <h2>Data Security</h2>
+    <p>All settings, including passwords, are stored using <code>UserDefaults</code> on your local device, protected by iOS/macOS Data Protection and your device's passcode or biometrics.</p>
+    <p>Passwords are transmitted to network servers in the format required by the protocol: DMR uses a <strong>SHA-256 hash</strong>; other protocols may transmit within the UDP payload. We recommend using network-specific hotspot security keys rather than primary account credentials.</p>
+  </div>
+
+  <!-- §7 -->
+  <div class="section">
+    <div class="section-number">Section 07</div>
+    <h2>Data Retention and Deletion</h2>
+    <p><strong>Settings:</strong> Stored indefinitely until you reset or delete the app. Delete Digi Voice from your device to remove all settings.</p>
+    <p><strong>Log Files:</strong> Stored in the Caches directory. The OS may delete them under storage pressure. You can clear logs manually from the Logs tab. All logs are removed when the app is deleted.</p>
+    <div class="callout">
+      <span class="callout-icon">ℹ️</span>
+      <span>We do not retain any data on our servers because we do not receive any data from your device in our infrastructure.</span>
+    </div>
+  </div>
+
+  <!-- §8 -->
+  <div class="section">
+    <div class="section-number">Section 08</div>
+    <h2>Children's Privacy</h2>
+    <p>Digi Voice is intended for licensed amateur radio operators and is <strong>not directed at persons under the age of 13</strong> (or the applicable minimum age in your jurisdiction). We do not knowingly collect personal information from children. If you believe a child has used this application without appropriate supervision, please contact us.</p>
+  </div>
+
+  <!-- §9 -->
+  <div class="section">
+    <div class="section-number">Section 09</div>
+    <h2>International Users</h2>
+    <p>Digi Voice is developed in Türkiye. All data you enter is stored locally on your device. When you connect to radio network servers, your data is transmitted to servers operated by third parties in various countries. By using network features, you consent to this cross-border transmission as part of the radio network operation.</p>
+  </div>
+
+  <!-- §10 -->
+  <div class="section">
+    <div class="section-number">Section 10</div>
+    <h2>Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last Updated" date and, where appropriate, provide notice within the application. Continued use of Digi Voice after the effective date of a revised policy constitutes your acceptance of the changes.</p>
+  </div>
+
+  <!-- §11 -->
+  <div class="section">
+    <div class="section-number">Section 11</div>
+    <h2>Your Rights and How to Exercise Them</h2>
+    <p>Because Digi Voice holds no personal data on its own servers, how you exercise data rights depends entirely on <strong>where the data actually lives.</strong></p>
+
+    <h3>Data Inside the Digi Voice App (on your device)</h3>
+    <ul class="perm-list">
+      <li>
+        <div class="perm-icon">👁</div>
+        <div><div class="perm-label">Access / Export</div><div class="perm-desc">Read all settings directly in the Digi Voice Settings screen — everything is visible to you.</div></div>
+      </li>
+      <li>
+        <div class="perm-icon">✏️</div>
+        <div><div class="perm-label">Rectify</div><div class="perm-desc">Edit any field in the Settings screen at any time, directly in the app.</div></div>
+      </li>
+      <li>
+        <div class="perm-icon">🗑️</div>
+        <div><div class="perm-label">Erase</div><div class="perm-desc">Delete the Digi Voice app from your device. All UserDefaults and cached log files are permanently removed. There is nothing to request from us — we hold no copy of your data.</div></div>
+      </li>
+    </ul>
+
+    <h3>Data on Third-Party Radio Network Platforms</h3>
+    <p>Your callsign, DMR ID, account profile, and transmission history are held by the platforms you registered with. <strong>Digi Voice has no access to this data and cannot modify or delete it on your behalf.</strong> Contact those platforms directly:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Platform</th><th>Data Rights Contact</th></tr></thead>
+        <tbody>
+          <tr><td><strong>RadioID.net</strong></td><td><a href="https://radioid.net">radioid.net</a> — contact via the website</td></tr>
+          <tr><td><strong>BrandMeister</strong></td><td><a href="https://brandmeister.network">brandmeister.network</a> — contact your regional admin</td></tr>
+          <tr><td><strong>TGIF Network</strong></td><td><a href="https://tgif.network">tgif.network</a></td></tr>
+          <tr><td><strong>FreeDMR</strong></td><td><a href="https://freedmr.cymru">freedmr.cymru</a></td></tr>
+          <tr><td><strong>HBLink / US Digital</strong></td><td><a href="https://usdigitalnetwork.com">usdigitalnetwork.com</a></td></tr>
+          <tr><td>D-STAR / YSF / AllStar</td><td>Contact the individual reflector operator</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout amber">
+      <span class="callout-icon">⚠️</span>
+      <span>ALGSoft Inc. cannot fulfill data access, correction, or deletion requests for data held by these platforms. Any such request directed to us will be forwarded to the relevant platform or returned with the appropriate contact information.</span>
+    </div>
+  </div>
+
+  <!-- §12 -->
+  <div class="section">
+    <div class="section-number">Section 12</div>
+    <h2>Contact Us</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-name">🏢 ALGSoft Inc.</div>
+        <a class="contact-link" href="mailto:info@algsoft.net.tr">✉️ info@algsoft.net.tr</a>
+        <a class="contact-link" href="https://algsoft.net.tr">🌐 algsoft.net.tr</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-name">👤 Fatih ÖNDER · TB1TFO</div>
+        <a class="contact-link" href="mailto:info@fatihonder.org.tr">✉️ info@fatihonder.org.tr</a>
+        <a class="contact-link" href="https://fatihonder.org.tr">🌐 fatihonder.org.tr</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    © 2026 ALGSoft Inc. · com.alg.dmrvoice · All rights reserved<br>
+    Amateur radio use requires a valid license from your national telecommunications authority.
+  </footer>
+</div>
+
+<!-- ═══════════════════════ TÜRKÇE ═══════════════════════ -->
+<div id="page-tr" class="page">
+
+  <div class="cover">
+    <span class="cover-icon">📻</span>
+    <h1 class="cover-title">Gizlilik Politikası<br><span>Digi Voice</span></h1>
+    <p class="cover-sub">Dijital Ses İletişimi · Amatör Radyo</p>
+    <div class="cover-meta">
+      <span class="meta-chip"><strong>Bundle ID</strong> com.alg.dmrvoice</span>
+      <span class="meta-chip"><strong>Platformlar</strong> iOS · macOS · watchOS</span>
+      <span class="meta-chip"><strong>Yürürlük</strong> 26 Haziran 2026</span>
+    </div>
+  </div>
+
+  <!-- §1 -->
+  <div class="section">
+    <div class="section-number">Bölüm 01</div>
+    <h2>Giriş</h2>
+    <p>ALGSoft Inc. (<strong>"biz", "bizim"</strong>) tarafından <strong>Digi Voice</strong>, ticari bir amatör radyo dijital ses iletişim uygulaması olarak geliştirilmiştir. Bu Gizlilik Politikası, Digi Voice uygulamasını iOS, macOS ve watchOS cihazlarda kullanımınız kapsamında bilgilerin nasıl işlendiğini açıklamaktadır.</p>
+    <p>Digi Voice, <strong>lisanslı amatör radyo operatörleri</strong> için tasarlanmıştır. Bu uygulamanın kullanımı, ülkenizin telekomünikasyon otoritesi tarafından verilen geçerli bir amatör radyo lisansı gerektirmektedir.</p>
+    <div class="callout amber">
+      <span class="callout-icon">⚠️</span>
+      <span>Digi Voice'u kullanarak bu Gizlilik Politikası'nın koşullarını kabul etmiş olursunuz. Kabul etmiyorsanız lütfen uygulamayı kullanmayı bırakınız.</span>
+    </div>
+  </div>
+
+  <!-- §2 -->
+  <div class="section">
+    <div class="section-number">Bölüm 02</div>
+    <h2>Digi Voice Verilerinizi Toplamaz</h2>
+
+    <div class="callout" style="margin-bottom:20px;">
+      <span class="callout-icon">🔒</span>
+      <span><strong>Kısa özet:</strong> Digi Voice hiçbir şey toplamaz. Arka ucu, veritabanı, analitiği ve kilitlenme raporu yoktur. Uygulama bir radyo protokol istemcisidir — cihazınız ile bağlanmayı seçtiğiniz radyo ağı sunucusu arasındaki bir köprüdür. ALGSoft Inc.'in işlettiği hiçbir sunucuya hiçbir veri ulaşmaz.</span>
+    </div>
+
+    <h3>Çağrı İşaretiniz, DMR ID'niz ve Şifreleriniz Üçüncü Taraf Platformlara Aittir</h3>
+    <p>Amatör radyo çağrı işaretiniz ve DMR/NXDN ID'niz, Digi Voice'tan bağımsız olarak doğrudan <strong>RadioID.net</strong>, <strong>BrandMeister</strong>, <strong>TGIF</strong> veya başka bir radyo ağına kayıt yaptırdığınızda oluşturulan kimlik bilgileridir. Digi Voice bu kimlik bilgilerini kendi sunucularında oluşturmaz, kaydetmez, saklamaz veya yönetmez.</p>
+    <p>Digi Voice Ayarlar ekranına çağrı işaretinizi ve şifrenizi girdiğinizde bu bilgiler <strong>yalnızca yerel cihazınızda</strong> saklanır ve cihazınızdan doğrudan seçtiğiniz üçüncü taraf sunucusuna gönderilir. Biz hiçbir zaman almayız.</p>
+
+    <h3>Cihazınızda Yerel Olarak Saklanan Yapılandırma</h3>
+    <p>Aşağıdaki alanlar yalnızca cihazınızda saklanır — tarafımızca hiçbir zaman alınmaz:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Alan</th><th>Amaç</th><th>Nereye Gider</th></tr></thead>
+        <tbody>
+          <tr><td>Amatör Radyo Çağrı İşareti</td><td>Protokol kimliği</td><td>Cihazınız → bağlandığınız radyo sunucusu</td></tr>
+          <tr><td>Dijital Radyo ID (DMR / NXDN)</td><td>Protokol düzeyinde kimlik</td><td>Cihazınız → bağlandığınız radyo sunucusu</td></tr>
+          <tr><td>ESSID</td><td>Hotspot abone ID son eki</td><td>Cihazınız → bağlandığınız radyo sunucusu</td></tr>
+          <tr><td>Ağ Şifreleri</td><td>Üçüncü taraf ağlarda kimlik doğrulama</td><td>Cihazınız → ilgili ağın sunucusu</td></tr>
+          <tr><td>GPS Koordinatları</td><td>Protokol paketlerine konum bildirimi</td><td>Cihazınız → radyo sunucusu (etkinse)</td></tr>
+          <tr><td>QTH Kare Konumu</td><td>Amatör radyo ızgara referansı</td><td>Cihazınız → radyo sunucusu (yapılandırılmışsa)</td></tr>
+          <tr><td>Konum Adı &amp; Açıklama</td><td>İsteğe bağlı protokol meta verisi</td><td>Cihazınız → radyo sunucusu (yapılandırılmışsa)</td></tr>
+          <tr><td>Kişisel URL</td><td>İsteğe bağlı protokol paketi alanı</td><td>Cihazınız → radyo sunucusu (yapılandırılmışsa)</td></tr>
+          <tr><td>Protokol &amp; Sunucu Tercihleri</td><td>Oturum ayarları</td><td>Cihazınızda kalır</td></tr>
+          <tr><td>Ses Ayarları</td><td>Mikrofon, AGC, VOX yapılandırması</td><td>Cihazınızda kalır</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Tanı Log Dosyaları</h3>
+    <p>Uygulama, oturum günlüklerini cihazın <strong>Caches dizinine</strong> yazar (iCloud ile senkronize edilmez). Günlükler yerel olarak saklanır ve <strong>bize veya herhangi bir üçüncü tarafa otomatik olarak iletilmez</strong>.</p>
+
+    <div class="callout">
+      <span class="callout-icon">ℹ️</span>
+      <span><strong>Analitik, kilitlenme SDK'sı veya telemetri yok.</strong> Digi Voice, Firebase, Mixpanel, Sentry, Crashlytics veya eşdeğer herhangi bir SDK entegre etmemektedir. ALGSoft Inc., cihazınızdan sıfır telemetri almaktadır.</span>
+    </div>
+  </div>
+
+  <!-- §3 -->
+  <div class="section">
+    <div class="section-number">Bölüm 03</div>
+    <h2>Bilgilerinizi Nasıl Kullanırız</h2>
+    <p>Bilgileriniz yalnızca uygulamanın temel radyo iletişim özelliklerini işletmek amacıyla kullanılır:</p>
+    <ul class="perm-list">
+      <li>
+        <div class="perm-icon">🔐</div>
+        <div><div class="perm-label">Protokol Kimlik Doğrulaması</div><div class="perm-desc">Çağrı işareti, dijital ID, ESSID ve şifre; seçtiğiniz sunucuya gönderilen protokol el sıkışma paketlerine dahil edilir.</div></div>
+      </li>
+      <li>
+        <div class="perm-icon">📍</div>
+        <div><div class="perm-label">Konum Bildirimi</div><div class="perm-desc">Girdiğiniz veya GPS ile aldığınız koordinatlar protokol yapılandırma paketine eklenir. Bu, DMR/BrandMeister/TGIF protokollerinin standart bir özelliğidir.</div></div>
+      </li>
+      <li>
+        <div class="perm-icon">🔍</div>
+        <div><div class="perm-label">Çağrı İşareti / ID Arama</div><div class="perm-desc">ID arama düğmesine dokunduğunuzda çağrı işaretiniz HTTPS üzerinden radioid.net'e gönderilir. Bu istek yalnızca sizin tarafınızdan başlatılır.</div></div>
+      </li>
+      <li>
+        <div class="perm-icon">🎙️</div>
+        <div><div class="perm-label">Ses İletimi</div><div class="perm-desc">PTT aktifken mikrofon sesiniz gerçek zamanlı olarak kodlanır ve bağlı olduğunuz radyo sunucusuna iletilir.</div></div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- §4 -->
+  <div class="section">
+    <div class="section-number">Bölüm 04</div>
+    <h2>Üçüncü Taraflarla Paylaşılan Bilgiler</h2>
+    <p>Kişisel bilgilerinizi satmıyor, kiralayıp paylaşmıyor veya ticari amaçla kullanmıyoruz. Aşağıdaki sınırlı paylaşım, uygulamanın radyo ağı işlevselliğinin doğrudan sonucudur.</p>
+
+    <h3>Radyo Ağı Sunucuları</h3>
+    <p>Sunucuya bağlandığınızda, aşağıdaki veriler <strong>cihazınızdan doğrudan seçtiğiniz sunucu operatörüne</strong> iletilir — altyapımız üzerinden değil:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Ağ</th><th>Operatör</th><th>Gizlilik Bilgisi</th></tr></thead>
+        <tbody>
+          <tr><td>BrandMeister</td><td>BrandMeister Network</td><td><a href="https://brandmeister.network">brandmeister.network</a></td></tr>
+          <tr><td>TGIF</td><td>TGIF Network</td><td><a href="https://tgif.network">tgif.network</a></td></tr>
+          <tr><td>FreeDMR</td><td>FreeDMR Projesi</td><td><a href="https://freedmr.cymru">freedmr.cymru</a></td></tr>
+          <tr><td>HBLink / US Digital</td><td>US Digital Network</td><td><a href="https://usdigitalnetwork.com">usdigitalnetwork.com</a></td></tr>
+          <tr><td>D-STAR / YSF / AllStar</td><td>Çeşitli operatörler</td><td>Reflektöre göre değişir</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>RadioID.net</h3>
+    <p>Dijital ID arama özelliğini kullandığınızda çağrı işaretiniz HTTPS üzerinden <code>https://radioid.net</code>'e iletilir. Ayrıntılar için <a href="https://radioid.net">radioid.net</a> adresine bakınız.</p>
+
+  </div>
+
+  <!-- §5 -->
+  <div class="section">
+    <div class="section-number">Bölüm 05</div>
+    <h2>Cihaz İzinleri</h2>
+    <ul class="perm-list">
+      <li>
+        <div class="perm-icon">🎙️</div>
+        <div>
+          <div class="perm-label">Mikrofon — PTT için zorunlu</div>
+          <div class="perm-desc">İlk PTT denemesinde talep edilir. Ses yalnızca PTT aktifken yakalanır ve yalnızca bağlı olduğunuz radyo sunucusuna iletilir. Uygulama sesi dosyaya kaydetmez.</div>
+        </div>
+      </li>
+      <li>
+        <div class="perm-icon">📍</div>
+        <div>
+          <div class="perm-label">Konum (Kullanımdayken) — İsteğe bağlı</div>
+          <div class="perm-desc">"GPS Konumunu Al" düğmesine dokunulduğunda talep edilir. <code>requestWhenInUseAuthorization()</code> kullanılır — arka plan konumu hiçbir zaman talep edilmez. Koordinatlar alındıktan sonra konum servisi hemen durdurulur.</div>
+        </div>
+      </li>
+      <li>
+        <div class="perm-icon">🌐</div>
+        <div>
+          <div class="perm-label">Yerel Ağ — Yerel hotspot bağlantıları için</div>
+          <div class="perm-desc">Yerel Wi-Fi'deki DMR hotspot cihazlarına UDP bağlantısı için gereklidir. Diğer cihazlardaki dosya veya verilere erişim sağlamaz.</div>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+  <!-- §6–12 condensed -->
+  <div class="section">
+    <div class="section-number">Bölüm 06</div>
+    <h2>Veri Güvenliği</h2>
+    <p>Şifreler dahil tüm ayarlar, iOS/macOS Veri Koruması ile cihaz parolanız/biyometriniz tarafından korunan <code>UserDefaults</code> üzerinde yerel olarak saklanır. DMR, SHA-256 hash kullanır. Birincil hesap kimlik bilgileri yerine ağa özgü hotspot güvenlik anahtarları kullanmanızı öneririz.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">Bölüm 07</div>
+    <h2>Veri Saklama ve Silme</h2>
+    <p><strong>Ayarlar:</strong> Uygulamayı silene kadar saklanır. Tüm ayarları kaldırmak için Digi Voice'u cihazınızdan silin.</p>
+    <p><strong>Log Dosyaları:</strong> Caches dizininde saklanır; Kayıtlar sekmesinden manuel temizlenebilir. Uygulama silinince kaldırılır.</p>
+    <div class="callout">
+      <span class="callout-icon">ℹ️</span>
+      <span>Altyapımızda cihazınızdan veri almadığımız için sunucularımızda hiçbir veri tutmuyoruz.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-number">Bölüm 08</div>
+    <h2>Çocukların Gizliliği</h2>
+    <p>Digi Voice, lisanslı amatör radyo operatörleri için tasarlanmış olup <strong>13 yaşın altındaki kişilere yönelik değildir</strong>. Bilerek çocuklardan kişisel bilgi toplamıyoruz. Bir çocuğun bu uygulamayı uygun denetim olmaksızın kullandığını düşünüyorsanız lütfen bizimle iletişime geçin.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">Bölüm 09</div>
+    <h2>Uluslararası Kullanıcılar</h2>
+    <p>Digi Voice Türkiye'de geliştirilmiştir. Girdiğiniz tüm veriler cihazınızda yerel olarak saklanır. Radyo ağı sunucularına bağlandığınızda, verileriniz çeşitli ülkelerdeki üçüncü taraflarca işletilen sunuculara iletilir.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">Bölüm 10</div>
+    <h2>Politika Değişiklikleri</h2>
+    <p>Bu politikayı zaman zaman güncelleyebiliriz. Güncelleme yapıldığında "Son Güncelleme" tarihini revize edecek ve uygun hallerde uygulama içinde bildirim sağlayacağız.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-number">Bölüm 11</div>
+    <h2>Haklarınız ve Nasıl Kullanacağınız</h2>
+    <p>Digi Voice kendi sunucularında hiçbir kişisel veri tutmadığından, veri haklarını kullanma şekliniz tamamen <strong>verinin gerçekte nerede bulunduğuna</strong> bağlıdır.</p>
+
+    <h3>Digi Voice Uygulaması İçindeki Veriler (cihazınızda)</h3>
+    <ul class="perm-list">
+      <li>
+        <div class="perm-icon">👁</div>
+        <div><div class="perm-label">Erişim / Dışa Aktarım</div><div class="perm-desc">Tüm ayarları Digi Voice Ayarlar ekranında doğrudan görebilirsiniz — her şey size görünürdür.</div></div>
+      </li>
+      <li>
+        <div class="perm-icon">✏️</div>
+        <div><div class="perm-label">Düzeltme</div><div class="perm-desc">Herhangi bir alanı Ayarlar ekranından istediğiniz zaman düzenleyebilirsiniz.</div></div>
+      </li>
+      <li>
+        <div class="perm-icon">🗑️</div>
+        <div><div class="perm-label">Silme</div><div class="perm-desc">Digi Voice uygulamasını cihazınızdan silin. Tüm ayarlar ve log dosyaları kalıcı olarak kaldırılır. Bizden talep edilecek bir şey yoktur — elimizde hiçbir kopya bulunmamaktadır.</div></div>
+      </li>
+    </ul>
+
+    <h3>Üçüncü Taraf Radyo Ağı Platformlarındaki Veriler</h3>
+    <p>Çağrı işaretiniz, DMR ID'niz ve hesap bilgileriniz kayıt yaptırdığınız platformlarda tutulmaktadır. <strong>Digi Voice bu verilere erişemez; sizin adınıza değiştiremez veya silemez.</strong> Veri haklarınız için doğrudan ilgili platformla iletişime geçin:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Platform</th><th>Veri Hakları İletişimi</th></tr></thead>
+        <tbody>
+          <tr><td><strong>RadioID.net</strong></td><td><a href="https://radioid.net">radioid.net</a> — web sitesi üzerinden</td></tr>
+          <tr><td><strong>BrandMeister</strong></td><td><a href="https://brandmeister.network">brandmeister.network</a> — bölgesel yönetici</td></tr>
+          <tr><td><strong>TGIF Network</strong></td><td><a href="https://tgif.network">tgif.network</a></td></tr>
+          <tr><td><strong>FreeDMR</strong></td><td><a href="https://freedmr.cymru">freedmr.cymru</a></td></tr>
+          <tr><td><strong>HBLink / US Digital</strong></td><td><a href="https://usdigitalnetwork.com">usdigitalnetwork.com</a></td></tr>
+          <tr><td>D-STAR / YSF / AllStar</td><td>İlgili reflektör operatörüyle iletişim</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout amber">
+      <span class="callout-icon">⚠️</span>
+      <span>ALGSoft Inc., bu platformların elinde bulunan veriler için veri erişim, düzeltme veya silme taleplerini yerine getiremez. Bize yöneltilen bu tür talepler, ilgili platforma yönlendirilecek veya size uygun iletişim bilgileriyle iade edilecektir.</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-number">Bölüm 12</div>
+    <h2>Bize Ulaşın</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="contact-name">🏢 ALGSoft Inc.</div>
+        <a class="contact-link" href="mailto:info@algsoft.net.tr">✉️ info@algsoft.net.tr</a>
+        <a class="contact-link" href="https://algsoft.net.tr">🌐 algsoft.net.tr</a>
+      </div>
+      <div class="contact-card">
+        <div class="contact-name">👤 Fatih ÖNDER · TB1TFO</div>
+        <a class="contact-link" href="mailto:info@fatihonder.org.tr">✉️ info@fatihonder.org.tr</a>
+        <a class="contact-link" href="https://fatihonder.org.tr">🌐 fatihonder.org.tr</a>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    © 2026 ALGSoft Inc. · com.alg.dmrvoice · Tüm hakları saklıdır<br>
+    Amatör radyo kullanımı ülkenizin telekomünikasyon otoritesinden alınmış geçerli bir lisans gerektirir.
+  </footer>
+</div>
+
+<script>
+  function switchLang(lang, btn) {
+    document.querySelectorAll('.page').forEach(p => p.classList.remove('visible'));
+    document.getElementById('page-' + lang).classList.add('visible');
+    document.querySelectorAll('.lang-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+    window.scrollTo({ top: 0 });
+  }
+</script>
