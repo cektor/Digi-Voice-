@@ -137,7 +137,7 @@
 
   <div class="card">
     <h2><span class="icon">📅</span> Last Updated</h2>
-    <p>This policy was last updated on <strong>June 26, 2025</strong> and applies to the
+    <p>This policy was last updated on <strong>June 26, 2026</strong> and applies to the
        Digi Voice application (package: <code>com.alg.dmrvoice</code>) published on Google Play.</p>
   </div>
 
@@ -213,6 +213,25 @@
     <p>The application writes diagnostic logs <strong>only to your device's local storage</strong>.
        These files are never uploaded anywhere. You can view and delete them from the
        <em>Log</em> tab inside the app.</p>
+
+    <h3>2.7 · Settings Export / Import</h3>
+    <p>Digi Voice provides an optional feature that lets you export all your application
+       settings to a <code>.config</code> file and import them on any other device or
+       platform that supports the same format. This feature:</p>
+    <ul>
+      <li>Is triggered <strong>only by you</strong> via the Settings screen — never runs automatically.</li>
+      <li>Uses Android's <strong>Storage Access Framework</strong> (system file picker); no additional
+          storage permissions are required.</li>
+      <li>Saves the file <strong>exactly where you choose</strong> — the app has no access to any
+          other location on your device.</li>
+      <li>Does <strong>not</strong> upload the file to any server or cloud service.</li>
+    </ul>
+    <div class="highlight-box amber">
+      <strong>Important:</strong> The exported <code>.config</code> file contains your callsign,
+      DMR ID, network passwords (BrandMeister, TGIF, AllStar), talk-group preferences, and all
+      other application settings in plain JSON format. <strong>Store this file securely</strong>
+      and do not share it with untrusted parties.
+    </div>
   </div>
 
   <!-- 3 · Permissions -->
@@ -265,6 +284,11 @@
         </tr>
       </tbody>
     </table>
+    <div class="highlight-box green" style="margin-top:14px;">
+      <strong>Settings export/import</strong> uses Android's Storage Access Framework (SAF) and
+      requires <strong>no additional permissions</strong>. The system file picker handles all
+      storage access on behalf of the user.
+    </div>
   </div>
 
   <!-- 4 · Third-Party Services -->
@@ -334,11 +358,14 @@
     <ul>
       <li>Your callsign and radio ID (entered by you, used only to connect to radio servers)</li>
       <li>Selected server and talk-group preferences</li>
-      <li>Application settings (audio levels, PTT key, mode, etc.)</li>
+      <li>Application settings (audio levels, PTT key, mode, favourite talk groups, etc.)</li>
       <li>Diagnostic log files (viewable and deletable from within the app)</li>
     </ul>
     <p>None of this data is backed up to the developer's servers.
        Uninstalling the app removes all locally stored data.</p>
+    <p>You may optionally export all settings to a <code>.config</code> file stored in a location
+       of your choosing. The exported file remains entirely under your control — Digi Voice does
+       not retain a copy and cannot access it after export.</p>
   </div>
 
   <!-- 7 · Children's Privacy -->
@@ -391,7 +418,7 @@
   <!-- T1 · Güncelleme -->
   <div class="card tr-section">
     <h2><span class="icon">📅</span> Son Güncelleme</h2>
-    <p>Bu gizlilik politikası en son <strong>26 Haziran 2025</strong> tarihinde güncellenmiştir
+    <p>Bu gizlilik politikası en son <strong>26 Haziran 2026</strong> tarihinde güncellenmiştir
        ve Google Play'de yayınlanan Digi Voice uygulaması (paket: <code>com.alg.dmrvoice</code>)
        için geçerlidir.</p>
   </div>
@@ -467,6 +494,25 @@
     <p>Uygulama, tanı günlüklerini <strong>yalnızca cihazınızın yerel depolama alanına</strong>
        yazar. Bu dosyalar hiçbir yere yüklenmez. Uygulama içindeki <em>Günlük</em> sekmesinden
        görüntüleyebilir ve silebilirsiniz.</p>
+
+    <h3>2.7 · Ayarları Dışa Aktar / İçe Aktar</h3>
+    <p>Digi Voice, tüm uygulama ayarlarınızı <code>.config</code> dosyası olarak dışa aktarmanıza
+       ve aynı formatı destekleyen farklı bir cihaz ya da platforma aktarmanıza olanak tanıyan
+       isteğe bağlı bir özellik sunar. Bu özellik:</p>
+    <ul>
+      <li>Yalnızca <strong>siz başlatırsanız</strong> çalışır — hiçbir zaman otomatik çalışmaz.</li>
+      <li>Android'in <strong>Storage Access Framework</strong> (sistem dosya seçici) altyapısını kullanır;
+          ek depolama izni gerekmez.</li>
+      <li>Dosyayı <strong>yalnızca sizin seçtiğiniz konuma</strong> kaydeder; uygulama cihazınızdaki
+          başka hiçbir konuma erişemez.</li>
+      <li>Dosyayı herhangi bir sunucuya veya bulut hizmetine <strong>yüklemez</strong>.</li>
+    </ul>
+    <div class="highlight-box amber">
+      <strong>Önemli:</strong> Dışa aktarılan <code>.config</code> dosyası çağrı işaretinizi,
+      DMR ID'nizi, ağ şifrelerinizi (BrandMeister, TGIF, AllStar), konuşma grubu tercihlerinizi ve
+      diğer tüm uygulama ayarlarınızı düz JSON formatında içerir. Bu dosyayı <strong>güvenli bir
+      yerde saklayınız</strong> ve güvenmediğiniz kişilerle paylaşmayınız.
+    </div>
   </div>
 
   <!-- T4 · İzinler -->
@@ -521,6 +567,11 @@
         </tr>
       </tbody>
     </table>
+    <div class="highlight-box green" style="margin-top:14px;">
+      <strong>Ayar dışa/içe aktarma</strong> özelliği, Android'in Storage Access Framework (SAF)
+      altyapısını kullanır ve <strong>ek izin gerektirmez</strong>. Depolama erişimi, sistem dosya
+      seçicisi aracılığıyla kullanıcı adına yönetilir.
+    </div>
   </div>
 
   <!-- T5 · Üçüncü Taraf Hizmetler -->
@@ -590,11 +641,14 @@
     <ul>
       <li>Çağrı işaretiniz ve telsiz ID'niz (sizin tarafınızdan girilir, yalnızca telsiz sunucularına bağlanmak için kullanılır)</li>
       <li>Seçili sunucu ve talk-group tercihleri</li>
-      <li>Uygulama ayarları (ses seviyeleri, PTT tuşu, mod vb.)</li>
+      <li>Uygulama ayarları (ses seviyeleri, PTT tuşu, mod, favori konuşma grupları vb.)</li>
       <li>Tanı günlük dosyaları (uygulama içinden görüntülenebilir ve silinebilir)</li>
     </ul>
     <p>Bu verilerin hiçbiri geliştiricinin sunucularına yedeklenmez.
        Uygulamayı kaldırmak, yerel olarak depolanan tüm verileri siler.</p>
+    <p>Tüm ayarları isteğe bağlı olarak seçtiğiniz bir konumdaki <code>.config</code> dosyasına dışa aktarabilirsiniz.
+       Dışa aktarılan dosya tamamen sizin kontrolünüzdedir; Digi Voice dışa aktarma sonrasında bu dosyayı
+       saklamamakta ve erişememektedir.</p>
   </div>
 
   <!-- T8 · Çocuk Gizliliği -->
@@ -637,7 +691,7 @@
 </main>
 
 <footer>
-  <p>© 2025 ALG Soft · Digi Voice · <a href="mailto:fatih@radio.org.tr">fatih@radio.org.tr</a></p>
+  <p>© 2026 ALG Soft · Digi Voice · <a href="mailto:fatih@radio.org.tr">fatih@radio.org.tr</a></p>
   <p style="margin-top:6px;">Package: com.alg.dmrvoice · Version: 1.0.0</p>
 </footer>
 

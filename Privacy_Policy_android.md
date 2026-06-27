@@ -1,6 +1,6 @@
 # Privacy Policy — Digi Voice
 
-**Last Updated:** June 26, 2025  
+**Last Updated:** June 26, 2026  
 **Application:** Digi Voice (`com.alg.dmrvoice`)  
 **Developer:** ALG Soft — [algsoft.net.tr](https://algsoft.net.tr)  
 **Contact:** [fatih@radio.org.tr](mailto:fatih@radio.org.tr)
@@ -56,6 +56,17 @@ Digi Voice downloads publicly available server host lists (e.g. from *pistar.uk*
 
 The application writes diagnostic logs **only to your device's local storage**. These files are never uploaded anywhere. You can view and delete them from the *Log* tab inside the app.
 
+#### 2.7 · Settings Export / Import
+
+Digi Voice provides an optional feature that lets you export all your application settings to a `.config` file and import them on any other device or platform that supports the same format. This feature:
+
+- Is triggered **only by you** via the Settings screen — never runs automatically.
+- Uses Android's **Storage Access Framework** (system file picker); no additional storage permissions are required.
+- Saves the file **exactly where you choose** — the app has no access to any other location on your device.
+- Does **not** upload the file to any server or cloud service.
+
+> **Important:** The exported `.config` file contains your callsign, DMR ID, network passwords (BrandMeister, TGIF, AllStar), talk-group preferences, and all other application settings in plain JSON format. **Store this file securely** and do not share it with untrusted parties.
+
 ---
 
 ### 3 · Android Permissions
@@ -72,6 +83,8 @@ The application writes diagnostic logs **only to your device's local storage**. 
 | `ACCESS_NETWORK_STATE` | Detect network availability before connecting. |
 | `MEDIA_CONTENT_CONTROL` | Handle hardware PTT buttons (volume keys, headset buttons). |
 | `WRITE_EXTERNAL_STORAGE` | Write diagnostic log files on Android 9 and below. |
+
+> **Settings export/import** uses Android's Storage Access Framework (SAF) and requires **no additional permissions**. The system file picker handles all storage access on behalf of the user.
 
 ---
 
@@ -105,10 +118,12 @@ Digi Voice stores the following **only on your device** (Android's encrypted Dat
 
 - Your callsign and radio ID (used only to connect to radio servers)  
 - Selected server and talk-group preferences  
-- Application settings (audio levels, PTT key, mode, etc.)  
+- Application settings (audio levels, PTT key, mode, favourite talk groups, etc.)  
 - Diagnostic log files (viewable and deletable from within the app)  
 
 None of this data is backed up to the developer's servers. Uninstalling the app removes all locally stored data.
+
+You may optionally export all settings to a `.config` file stored in a location of your choosing. The exported file remains entirely under your control — Digi Voice does not retain a copy and cannot access it after export.
 
 ---
 
@@ -188,6 +203,17 @@ Digi Voice, sunucu seçim menüsünü doldurmak için kamuya açık sunucu liste
 
 Uygulama, tanı günlüklerini **yalnızca cihazınızın yerel depolama alanına** yazar. Bu dosyalar hiçbir yere yüklenmez. Uygulama içindeki *Günlük* sekmesinden görüntüleyebilir ve silebilirsiniz.
 
+#### 2.7 · Ayarları Dışa Aktar / İçe Aktar
+
+Digi Voice, tüm uygulama ayarlarınızı `.config` dosyası olarak dışa aktarmanıza ve aynı formatı destekleyen farklı bir cihaz ya da platforma aktarmanıza olanak tanıyan isteğe bağlı bir özellik sunar. Bu özellik:
+
+- Yalnızca **siz başlatırsanız** çalışır — hiçbir zaman otomatik çalışmaz.
+- Android'in **Storage Access Framework** (sistem dosya seçici) altyapısını kullanır; ek depolama izni gerekmez.
+- Dosyayı **yalnızca sizin seçtiğiniz konuma** kaydeder; uygulama cihazınızdaki başka hiçbir konuma erişemez.
+- Dosyayı herhangi bir sunucuya veya bulut hizmetine **yüklemez**.
+
+> **Önemli:** Dışa aktarılan `.config` dosyası çağrı işaretinizi, DMR ID'nizi, ağ şifrelerinizi (BrandMeister, TGIF, AllStar), konuşma grubu tercihlerinizi ve diğer tüm uygulama ayarlarınızı düz JSON formatında içerir. Bu dosyayı **güvenli bir yerde saklayınız** ve güvenmediğiniz kişilerle paylaşmayınız.
+
 ---
 
 ### 3 · Android İzinleri
@@ -204,6 +230,8 @@ Uygulama, tanı günlüklerini **yalnızca cihazınızın yerel depolama alanın
 | `ACCESS_NETWORK_STATE` | Bağlantıdan önce ağ kullanılabilirliğini kontrol eder. |
 | `MEDIA_CONTENT_CONTROL` | Donanım PTT düğmelerini yönetir. |
 | `WRITE_EXTERNAL_STORAGE` | Android 9 ve altında tanı günlüğü yazar. |
+
+> **Ayar dışa/içe aktarma** özelliği Android'in Storage Access Framework (SAF) altyapısını kullanır ve **ek izin gerektirmez**. Depolama erişimi, sistem dosya seçicisi aracılığıyla kullanıcı adına yönetilir.
 
 ---
 
@@ -237,10 +265,12 @@ Digi Voice, aşağıdakileri **yalnızca cihazınızda** (Android şifreli DataS
 
 - Çağrı işaretiniz ve telsiz ID'niz (yalnızca telsiz sunucularına bağlanmak için)  
 - Seçili sunucu ve talk-group tercihleri  
-- Uygulama ayarları (ses seviyeleri, PTT tuşu, mod vb.)  
+- Uygulama ayarları (ses seviyeleri, PTT tuşu, mod, favori konuşma grupları vb.)  
 - Tanı günlük dosyaları (uygulama içinden görüntülenebilir ve silinebilir)  
 
 Bu verilerin hiçbiri geliştiricinin sunucularına yedeklenmez. Uygulamayı kaldırmak, yerel olarak depolanan tüm verileri siler.
+
+Tüm ayarları isteğe bağlı olarak seçtiğiniz bir konumdaki `.config` dosyasına dışa aktarabilirsiniz. Dışa aktarılan dosya tamamen sizin kontrolünüzdedir; Digi Voice dışa aktarma sonrasında bu dosyayı saklamamakta ve erişememektedir.
 
 ---
 
@@ -270,4 +300,4 @@ Bu Gizlilik Politikası'nı zaman zaman güncelleyebiliriz. Revize edilmiş poli
 
 ---
 
-*© 2025 ALG Soft · Digi Voice · com.alg.dmrvoice*
+*© 2026 ALG Soft · Digi Voice · com.alg.dmrvoice*
