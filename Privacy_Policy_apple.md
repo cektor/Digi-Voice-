@@ -137,6 +137,8 @@ The following device permissions are requested:
 | **Microphone** | iOS / macOS / watchOS | First PTT attempt | Capture voice audio for transmission |
 | **Location (When In Use)** | iOS / macOS | When "Get GPS Location" is tapped | Obtain GPS coordinates for position reporting |
 | **Local Network** | iOS / macOS | On connection attempt to a local server | Connect to DMR hotspot servers on the local network |
+| **File Access — Import** | iOS / macOS | When user taps "Import" and selects a file | Read a user-selected `.config` settings backup file via the system document picker; no permission prompt — access is granted by the system picker |
+| **File Access — Export** | iOS / macOS | When user taps "Export" | Write a `.config` settings backup file and present the system share sheet; no permission prompt — sharing is handled entirely by the system |
 
 #### Permission Details
 
@@ -148,6 +150,14 @@ Location is accessed only when you explicitly tap "Get GPS Location." The app us
 
 **Local Network:**  
 Required to allow UDP connections to DMR hotspot devices operating on your local Wi-Fi network. This permission does not grant access to files or data on other devices.
+
+**File Access — Import / Export:**  
+Digi Voice can export all user settings as a `.config` backup file and import a previously exported file. These operations are performed exclusively by user action:
+
+- **Export:** The app writes the settings to a temporary file and presents the iOS/macOS system share sheet (`UIActivityViewController` / `NSSavePanel`). The file never leaves the device without an explicit user action. No special `Info.plist` permission key is required.
+- **Import:** The app opens the iOS system document picker (`.fileImporter` / `NSOpenPanel` on macOS). The user selects the file; the app reads only the file the user explicitly chose. No special `Info.plist` permission key is required.
+
+> **Important:** The exported `.config` file contains all settings, **including network passwords** (BrandMeister, TGIF, AllStar, etc.) in obfuscated form. Store the exported file in a secure location. ALGSoft Inc. has no access to exported files and cannot recover passwords if the file is lost or exposed.
 
 **Apple Watch — No Additional Permissions:**  
 The Digi Voice Watch companion app does not request any permissions beyond those already granted to the paired iPhone app. Microphone access on the Watch is governed by watchOS and granted automatically for paired apps that have microphone permission on iPhone.
@@ -387,6 +397,8 @@ Aşağıdaki cihaz izinleri talep edilmektedir:
 | **Mikrofon** | iOS / macOS / watchOS | İlk PTT denemesinde | İletim için ses yakalanması |
 | **Konum (Kullanımdayken)** | iOS / macOS | "GPS Konumunu Al" düğmesine dokunulduğunda | Konum bildirimi için GPS koordinatlarının alınması |
 | **Yerel Ağ** | iOS / macOS | Yerel bir sunucuya bağlantı denemesinde | Yerel ağdaki DMR hotspot sunucularına bağlantı |
+| **Dosya Erişimi — İçe Aktarma** | iOS / macOS | Kullanıcı "İçe Aktar" düğmesine basıp dosya seçtiğinde | Sistem doküman seçici aracılığıyla kullanıcının seçtiği `.config` ayar yedek dosyasını okur; sistem seçici bu erişimi yönettiği için özel bir izin iletişim kutusu gösterilmez |
+| **Dosya Erişimi — Dışa Aktarma** | iOS / macOS | Kullanıcı "Dışa Aktar" düğmesine bastığında | `.config` ayar yedek dosyasını oluşturur ve sistem paylaşım sayfasını sunar; paylaşım tamamen sistem tarafından yönetildiği için özel bir izin iletişim kutusu gösterilmez |
 
 #### İzin Detayları
 
@@ -398,6 +410,14 @@ Konuma yalnızca "GPS Konumunu Al" düğmesine açıkça dokunduğunuzda erişil
 
 **Yerel Ağ:**  
 Yerel Wi-Fi ağınızda çalışan DMR hotspot cihazlarına UDP bağlantısına izin vermek için gereklidir. Bu izin, diğer cihazlardaki dosya veya verilere erişim sağlamaz.
+
+**Dosya Erişimi — İçe Aktarma / Dışa Aktarma:**  
+Digi Voice, tüm kullanıcı ayarlarını `.config` yedek dosyası olarak dışa aktarabilir ve önceden dışa aktarılan bir dosyayı içe aktarabilir. Bu işlemler yalnızca kullanıcı eylemiyle gerçekleşir:
+
+- **Dışa Aktarma:** Uygulama, ayarları geçici bir dosyaya yazar ve iOS/macOS sistem paylaşım sayfasını (`UIActivityViewController` / `NSSavePanel`) sunar. Kullanıcının açık eylemi olmadan dosya cihazdan çıkmaz. Özel `Info.plist` izin anahtarı gerekmez.
+- **İçe Aktarma:** Uygulama, iOS sistem doküman seçiciyi (`.fileImporter` / macOS'ta `NSOpenPanel`) açar. Kullanıcı dosyayı seçer; uygulama yalnızca kullanıcının açıkça seçtiği dosyayı okur. Özel `Info.plist` izin anahtarı gerekmez.
+
+> **Önemli:** Dışa aktarılan `.config` dosyası, ağ şifreleriniz (BrandMeister, TGIF, AllStar vb.) dahil tüm ayarlarınızı gizlenmiş biçimde içerir. Dışa aktarılan dosyayı güvenli bir konumda saklayınız. ALGSoft Inc.'in dışa aktarılan dosyalara erişimi yoktur; dosyanın kaybolması veya ifşa edilmesi durumunda şifreleri kurtaramaz.
 
 **Apple Watch — Ek İzin Yok:**  
 Digi Voice Watch yardımcı uygulaması, eşleşik iPhone uygulamasına halihazırda tanınan izinlerin ötesinde herhangi bir izin talep etmez. Watch'taki mikrofon erişimi watchOS tarafından yönetilir ve iPhone'da mikrofon iznine sahip eşleşik uygulamalar için otomatik olarak tanınır.
