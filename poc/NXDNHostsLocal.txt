@@ -1,0 +1,16 @@
+#########################################################
+#							#
+# NXDN_Hosts.txt - Local Add-on				#
+# Written by Andy Taylor (MW0MWZ) for Pi-Star		#
+#							#
+#########################################################
+#							#
+# Add your over-ride lines below, following the example	#
+# please make sure that lines are tab delimited and NOT	#
+# space delimited.					#
+#							#
+#########################################################
+# TG Number	IP/Hostname	Port Number		#
+#########################################################
+# Example Host
+#10123		1.1.1.1		41000
