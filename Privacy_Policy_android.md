@@ -1,6 +1,6 @@
 # Privacy Policy — Digi Voice
 
-**Last Updated:** August 18, 2026  
+**Last Updated:** November 26, 2026  
 **Application:** Digi Voice (`com.alg.dmrvoice`)  
 **Platforms:** Android phone & tablet · Android Auto · Android TV  
 **Developer:** ALG Soft — [algsoft.net.tr](https://algsoft.net.tr)  
@@ -49,15 +49,21 @@ Location access is **optional**. If you grant the Location permission, the app d
 
 The microphone is used solely to capture your voice during PTT transmissions. Audio is encoded and streamed in real-time to the selected radio server. Digi Voice does not record, store, or upload audio to any service.
 
-#### 2.5 · Server List Downloads
+#### 2.5 · Accessibility Service (Android)
+
+Digi Voice offers an optional **“Talk with screen locked”** feature that uses Android's AccessibilityService API. The service is **off by default** and works only after you choose to enable it and turn it on in Android Accessibility settings. It processes physical key events locally, and only for keys you have assigned in Digi Voice Settings (PTT, talk-group scan, APRS, VOX, or Car Mode), so those controls can work while the app is in the background or the screen is locked. Other keys pass through unchanged.
+
+The service does **not** read screen or window content and does not subscribe to accessibility events. It does not send key events or screen information to Digi Voice, the developer, or third parties. If you use an assigned PTT key, the resulting voice transmission follows the microphone and radio-network data flows described in Sections 2.1 and 2.4; the AccessibilityService itself does not access or transmit audio. You can turn the service off at any time in Android Accessibility settings.
+
+#### 2.6 · Server List Downloads
 
 Digi Voice downloads publicly available server host lists (e.g. from *pistar.uk*, *m17project.org*) to populate the server selection menu. These are plain-text files maintained by the amateur radio community. No personal data is included in these requests.
 
-#### 2.6 · Log Files (Device-Only)
+#### 2.7 · Log Files (Device-Only)
 
 The application writes diagnostic logs **only to your device's local storage**. These files are never uploaded anywhere. You can view and delete them from the *Log* tab inside the app.
 
-#### 2.7 · Settings Export / Import
+#### 2.8 · Settings Export / Import
 
 Digi Voice provides an optional feature that lets you export all your application settings to a `.config` file and import them on any other device or platform that supports the same format. This feature:
 
@@ -124,6 +130,8 @@ The TV build uses the same permissions as the phone build (see Section 5); local
 | `BLUETOOTH_CONNECT` | Use Bluetooth headsets / PTT accessories for audio. |
 | `MODIFY_AUDIO_SETTINGS`, `VIBRATE` | Audio routing for PTT and haptic feedback. |
 | `WRITE_EXTERNAL_STORAGE` | Write diagnostic log files on Android 9 and below. |
+
+> The optional AccessibilityService is a separate special-access feature, not an Android runtime permission. It is off by default, processes only the physical keys you assign in Digi Voice Settings, and can be disabled in Android Accessibility settings (see Section 2.5).
 
 > **Settings export/import** uses Android's Storage Access Framework (SAF) and requires **no additional permissions**. The system file picker handles all storage access on behalf of the user.
 
@@ -251,15 +259,21 @@ Konum erişimi **isteğe bağlıdır**. Konum iznini verirseniz uygulama, *Maide
 
 Mikrofon yalnızca PTT iletimi sırasında sesinizi yakalamak için kullanılır. Ses, gerçek zamanlı olarak seçilen telsiz sunucusuna kodlanıp akıtılır. Digi Voice herhangi bir hizmete ses kaydetmez, depolamaz veya yüklemez.
 
-#### 2.5 · Sunucu Listesi İndirmeleri
+#### 2.5 · Erişilebilirlik Servisi (Android)
+
+Digi Voice, Android'in AccessibilityService API'sini kullanan isteğe bağlı **“Ekran kilitliyken konuş”** özelliği sunar. Servis **varsayılan olarak kapalıdır**; yalnızca siz etkinleştirmeyi seçip Android Erişilebilirlik ayarlarından açarsanız çalışır. Uygulama arka plandayken veya ekran kilitliyken kontrollerin çalışabilmesi için fiziksel tuş olaylarını cihazda işler ve yalnızca Digi Voice Ayarları'nda sizin atadığınız tuşları (PTT, konuşma grubu tarama, APRS, VOX veya Araç Modu) algılar. Diğer tuşlar değişmeden sisteme iletilir.
+
+Servis ekran veya pencere içeriğini **okumaz** ve erişilebilirlik olaylarına abone olmaz. Tuş olaylarını veya ekran bilgilerini Digi Voice'a, geliştiriciye ya da üçüncü taraflara **göndermez**. Atanmış bir PTT tuşunu kullanmanız durumunda oluşan ses iletimi, Bölüm 2.1 ve 2.4'te açıklanan mikrofon ve telsiz ağı veri akışlarına tabidir; AccessibilityService ses verisine erişmez veya ses göndermez. Servisi istediğiniz zaman Android Erişilebilirlik ayarlarından kapatabilirsiniz.
+
+#### 2.6 · Sunucu Listesi İndirmeleri
 
 Digi Voice, sunucu seçim menüsünü doldurmak için kamuya açık sunucu listelerini (*pistar.uk*, *m17project.org* vb.) indirir. Bunlar amatör telsiz topluluğu tarafından yönetilen düz metin dosyalarıdır. Bu isteklere hiçbir kişisel veri dahil edilmez.
 
-#### 2.6 · Günlük Dosyaları (Yalnızca Cihaz)
+#### 2.7 · Günlük Dosyaları (Yalnızca Cihaz)
 
 Uygulama, tanı günlüklerini **yalnızca cihazınızın yerel depolama alanına** yazar. Bu dosyalar hiçbir yere yüklenmez. Uygulama içindeki *Günlük* sekmesinden görüntüleyebilir ve silebilirsiniz.
 
-#### 2.7 · Ayarları Dışa Aktar / İçe Aktar
+#### 2.8 · Ayarları Dışa Aktar / İçe Aktar
 
 Digi Voice, tüm uygulama ayarlarınızı `.config` dosyası olarak dışa aktarmanıza ve aynı formatı destekleyen farklı bir cihaz ya da platforma aktarmanıza olanak tanıyan isteğe bağlı bir özellik sunar. Bu özellik:
 
@@ -326,6 +340,8 @@ TV sürümü telefon sürümüyle aynı izinleri kullanır (bkz. Bölüm 5); yer
 | `BLUETOOTH_CONNECT` | Bluetooth kulaklık / PTT aksesuarlarını kullanır. |
 | `MODIFY_AUDIO_SETTINGS`, `VIBRATE` | PTT ses yönlendirmesi ve dokunsal geri bildirim. |
 | `WRITE_EXTERNAL_STORAGE` | Android 9 ve altında tanı günlüğü yazar. |
+
+> İsteğe bağlı AccessibilityService, Android çalışma zamanı izninden ayrı bir özel erişim özelliğidir. Varsayılan olarak kapalıdır, yalnızca Digi Voice Ayarları'nda sizin atadığınız fiziksel tuşları işler ve Android Erişilebilirlik ayarlarından kapatılabilir (bkz. Bölüm 2.5).
 
 > **Ayar dışa/içe aktarma** özelliği Android'in Storage Access Framework (SAF) altyapısını kullanır ve **ek izin gerektirmez**. Depolama erişimi, sistem dosya seçicisi aracılığıyla kullanıcı adına yönetilir.
 
